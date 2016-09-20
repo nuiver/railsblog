@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root to: "blogposts#index"
+
   devise_for :users
   resources :portfolio_items
   resources :blogposts
