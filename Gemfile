@@ -31,6 +31,12 @@ gem 'devise'
 
 gem 'carrierwave'
 
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
+gem 'redcarpet'
+gem 'coderay'
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
