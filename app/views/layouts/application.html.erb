@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Marknuiverblog</title>
+    <title>Mark Nuiver</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,12 +9,17 @@
   </head>
 
   <body>
+    <%= render 'layouts/nav' %>
+
     <!-- Temporary place -->
     <div class="flash_messages">
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
     </div>
-    
-    <%= yield %>
+
+    <div class='container'>
+      <%= yield %>
+    </div>
+
   </body>
 </html>
