@@ -2,17 +2,67 @@
  /* "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"*/
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import "font-awesome";
+
+// font-family: 'Fira Sans', sans-serif;
+// font-family: 'Merriweather', serif;
+// font-family: 'Fira Mono', monospace;
 
 // General styles
+body {
+  font-family: 'Fira Sans', sans-serif;
+  color: #ffffff;
+  background-color: #161616;
+}
+
+a {
+  color: #c0a062;
+}
+a:hover, a:focus {
+  text-decoration: none;
+  color: #ddc18d;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', serif;
+}
 
 
 // Nav bar
 #nav {
-  background-color: #dddddd;
-  height: 50px;
+  background-color: #161616;
+  height: 55px;
 }
 
-.logo {
-  background-color: #eeeeee;
-  height: 50px;
+.logobar {
+  height: 55px;
+  padding: 6px 0;
+}
+.name_header {
+  margin-left: 25px;
+  font-size: 27px;
+  position: relative;
+  top: -40px;
+  left: 75px;
+  letter-spacing: 0.03em;
+}
+.menu {
+  font-size: 16px;
+}
+.menu a {
+  color: #ffffff;
+}
+.menu a:hover, .menu a:focus {
+  color: #ddc18d;
+}
+.menu ul {
+  float: right;
+  margin: 0;
+  height: 55px;
+}
+.menu li {
+  list-style-type: none;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  display: inline-block;
+  margin: 18px 10px;
 }
