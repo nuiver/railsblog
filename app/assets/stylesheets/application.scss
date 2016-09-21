@@ -26,7 +26,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Merriweather', serif;
 }
 
-
+// forms
+form input, form textarea {
+  color: #dddddd;
+  background-color: #444444;
+}
 // Nav bar
 #nav {
   background-color: #161616;
