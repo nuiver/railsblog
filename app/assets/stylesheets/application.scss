@@ -1,4 +1,7 @@
-
+/*
+*= require_tree .
+*= require_self
+*/
  /* "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"*/
  @import "bootstrap-sprockets";
  @import "bootstrap";
@@ -13,12 +16,17 @@ body {
   font-family: 'Fira Sans', sans-serif;
   color: #ffffff;
   background-color: #161616;
+  top: 0;
 }
 
 a {
   color: #c0a062;
 }
 a:hover, a:focus {
+  text-decoration: none;
+  color: #ddc18d;
+}
+a:visited {
   text-decoration: none;
   color: #ddc18d;
 }
@@ -31,21 +39,42 @@ form input, form textarea {
   color: #dddddd;
   background-color: #444444;
 }
+
+// alerts
+
+.alert {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.notice {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
 // Nav bar
-#nav {
-  background-color: #161616;
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100vw;
   height: 55px;
+  margin: 0;
+  background-color: rgba(22, 22, 22, 0);
 }
 
 .logobar {
   height: 55px;
-  padding: 6px 0;
+  padding: 4px 0 0 13px;
+}
+.logo img {
+  height: 40px;
 }
 .name_header {
-  margin-left: 25px;
+  margin-left: 15px;
   font-size: 27px;
   position: relative;
-  top: -40px;
+  top: -35px;
   left: 75px;
   letter-spacing: 0.03em;
 }
@@ -69,4 +98,16 @@ form input, form textarea {
   letter-spacing: 0.03em;
   display: inline-block;
   margin: 18px 10px;
+}
+// Jumbo
+
+.jumbo {
+  height: 60vh;
+  overflow: hidden;
+  background-image: image-url('designerdev.jpg');
+  background-position: center;
+  background-size:cover;
+}
+.jumbo img {
+  width: 100%;
 }

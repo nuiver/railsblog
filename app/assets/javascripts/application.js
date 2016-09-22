@@ -15,3 +15,28 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
+
+$(document).on('turbolinks:load', function() {
+  fadingMenu();
+});
+
+function fadingMenu() {
+
+  var fadeStart=100 // 100px scroll or less will equiv to 1 opacity
+  ,fadeUntil=300 // 200px scroll or more will equiv to 0 opacity
+  ,menu = $('.nav')
+  ;
+
+  $(window).bind('scroll', function(){
+  var offset = $(document).scrollTop()
+      ,opacity=1
+  ;
+  if( offset<=fadeStart ){
+      opacity=0;
+  }else if( offset<=fadeUntil ){
+      opacity=0+offset/fadeUntil;
+  }
+  menu.css('background-color', 'rgba(22, 22, 22,' + opacity + ')');
+  });
+
+};

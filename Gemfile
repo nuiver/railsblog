@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 
 gem 'carrierwave'
+gem 'cloudinary'
 
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
