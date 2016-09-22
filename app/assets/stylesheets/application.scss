@@ -67,11 +67,14 @@ form input, form textarea {
   height: 55px;
   padding: 4px 0 0 13px;
 }
+.logo img {
+  height: 40px;
+}
 .name_header {
-  margin-left: 25px;
+  margin-left: 15px;
   font-size: 27px;
   position: relative;
-  top: -40px;
+  top: -35px;
   left: 75px;
   letter-spacing: 0.03em;
 }
@@ -99,8 +102,11 @@ form input, form textarea {
 // Jumbo
 
 .jumbo {
-  height: 40vh;
-  background-image: url("assets/ivy-leaves-background.jpg") no-repeat center;
+  height: 60vh;
+  overflow: hidden;
+  background-image: image-url('designerdev.jpg');
+  background-position: center;
+  background-size:cover;
 }
 .jumbo img {
   width: 100%;
