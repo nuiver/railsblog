@@ -1,4 +1,4 @@
-<%= form_for(portfolio_item) do |f| %>
+<%= form_for(portfolio_item, type: :file) do |f| %>
   <% if portfolio_item.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(portfolio_item.errors.count, "error") %> prohibited this portfolio_item from being saved:</h2>
@@ -19,6 +19,11 @@
   <div class="field">
     <%= f.label :text %>
     <%= f.text_area :text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
   </div>
 
   <div class="actions">
