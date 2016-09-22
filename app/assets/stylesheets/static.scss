@@ -1,0 +1,22 @@
+// Place all the styles related to the Static controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.home-about .home-stack{
+  padding: 20px 15px;
+}
+
+.about-pic img {
+  width: 100%;
+  padding-top: 20px;
+}
+.stack-column {
+  padding: 20px 15px;
+}
+.stack-circle {
+  height: 12vw;
+  width: 12vw;
+  background-color: #c0a062;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 5vw;
+}

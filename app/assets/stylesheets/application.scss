@@ -61,6 +61,7 @@ form input, form textarea {
   height: 55px;
   margin: 0;
   background-color: rgba(22, 22, 22, 0);
+  z-index: 5;
 }
 
 .logobar {
@@ -100,7 +101,9 @@ form input, form textarea {
   margin: 18px 10px;
 }
 // Jumbo
-
+.buffer {
+  margin-top: 60px;
+}
 .jumbo {
   height: 60vh;
   overflow: hidden;
