@@ -5,10 +5,13 @@
   <div class="blogitemlist_title">
     <h3><%= link_to blogpost.title, blogpost %></h3>
   </div>
+  <% blogpost.tags.each do |tag| %>
+    <div>
+      <%= tag.tag_name %><br />
+    </div>
+  <% end %>
   <div class="blogitemlist_text">
     <p><%= truncate(blogpost.text, length: 300) %><p>
   </div>
-  <div>
-  <%= link_to 'Edit', edit_blogpost_path(blogpost) %>
-  </div>
+
 </div>
