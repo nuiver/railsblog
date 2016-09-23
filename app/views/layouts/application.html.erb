@@ -10,9 +10,13 @@
 
   <body>
     <%= render 'layouts/nav' %>
-
+    <% unless current_page?(root_path) || current_page?(contact_path) %>
+      <div class="buffer"></div>
+    <% else %>
+      <div class="jumbo"></div>
+    <% end %>
     <!-- Temporary place -->
-    <div class="flash_messages">
+    <div class="container flash_messages">
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
     </div>
@@ -20,6 +24,8 @@
     <div class='container'>
       <%= yield %>
     </div>
+
+    <!-- <%= render 'layouts/footer' %> -->
 
   </body>
 </html>

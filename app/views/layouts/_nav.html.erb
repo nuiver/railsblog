@@ -1,18 +1,18 @@
 <div class="nav">
   <div class="container">
-    <div class="logobar col-md-4">
+    <div class="logobar col-md-3">
       <div class="logo">
         <%= image_tag 'nui-logo-open.png' %>
       </div>
       <div class="name_header">
-        <a href="#">MARK NUIVER</a>
+        <%= link_to "MARK NUIVER", root_path %>
       </div>
     </div>
-    <div class="menu col-md-8">
+    <div class="menu col-md-9">
       <ul>
         <li><%= link_to "ABOUT ME", root_path %></li>
-        <li><%= link_to "PORTFOLIO", portfolio_items_path %></li>
         <li><%= link_to "BLOG", blogposts_path %></li>
+        <li><%= link_to "PORTFOLIO", portfolio_items_path %></li>
         <li><%= link_to "CONTACT", contact_path %></li>
         <li><a href="https://www.linkedin.com/in/marknuiver" target="_blank" class="fa fa-linkedin-square"></a></li>
         <li><a href="https://www.facebook.com/nuiver" target="_blank" class="fa fa-facebook-official"></a></li>

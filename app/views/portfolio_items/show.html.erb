@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<%= image_tag @portfolio_item.image_url.to_s %>
+<div class="blogitem_image">
+  <%= image_tag @portfolio_item.image_url.to_s %>
+</div>
 
 <p>
   <strong>Title:</strong>
@@ -9,8 +11,15 @@
 
 <p>
   <strong>Text:</strong>
-  <%= @portfolio_item.text %>
+  <%= markdown(@portfolio_item.text) %>
 </p>
 
+<% @tags.each do |tag| %>
+  <div>
+    <%= tag.tag_name %><br />
+  </div>
+<% end %>
+
 <%= link_to 'Edit', edit_portfolio_item_path(@portfolio_item) %> |
-<%= link_to 'Back', portfolio_items_path %>
+<%= link_to 'Back', portfolio_items_path %> |
+<%= link_to 'Delete', portfolio_item_path, method: 'delete' %>

@@ -2,6 +2,10 @@ Rails.application.routes.draw do
 
   root to: "static#homepage"
 
+  devise_scope :user do
+    get "/signin" => 'devise/sessions#create'
+  end
+
   devise_for :users
   resources :portfolio_items
   resources :blogposts

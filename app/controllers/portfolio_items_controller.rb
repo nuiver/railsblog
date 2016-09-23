@@ -10,15 +10,18 @@ class PortfolioItemsController < ApplicationController
   # GET /portfolio_items/1
   # GET /portfolio_items/1.json
   def show
+    @tags = @portfolio_item.tags ||= []
   end
 
   # GET /portfolio_items/new
   def new
     @portfolio_item = PortfolioItem.new
+    @tags = Tag.all
   end
 
   # GET /portfolio_items/1/edit
   def edit
+    @tags = Tag.all
   end
 
   # POST /portfolio_items
@@ -69,6 +72,6 @@ class PortfolioItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def portfolio_item_params
-      params.require(:portfolio_item).permit(:title, :text, :image)
+      params.require(:portfolio_item).permit(:title, :text, :image, tag_ids:[])
     end
 end

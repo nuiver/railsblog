@@ -12,6 +12,7 @@
 .stack-column {
   padding: 20px 15px;
 }
+
 .stack-circle {
   height: 12vw;
   width: 12vw;
@@ -19,4 +20,10 @@
   border-radius: 50%;
   text-align: center;
   padding-top: 5vw;
+}
+@media only screen and (max-width: 768px) {
+  .stack-circle {
+    height: 40vw;
+    width: 40vw;
+  }
 }

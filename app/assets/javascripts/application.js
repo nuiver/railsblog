@@ -22,8 +22,8 @@ $(document).on('turbolinks:load', function() {
 
 function fadingMenu() {
 
-  var fadeStart=100 // 100px scroll or less will equiv to 1 opacity
-  ,fadeUntil=300 // 200px scroll or more will equiv to 0 opacity
+  var fadeStart=10 // 100px scroll or less will equiv to 1 opacity
+  ,fadeUntil=250 // 200px scroll or more will equiv to 0 opacity
   ,menu = $('.nav')
   ;
 
