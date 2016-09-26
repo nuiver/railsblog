@@ -1,5 +1,7 @@
 class BlogpostsController < ApplicationController
   before_action :set_blogpost, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
+
 
   # GET /blogposts
   # GET /blogposts.json
@@ -10,15 +12,18 @@ class BlogpostsController < ApplicationController
   # GET /blogposts/1
   # GET /blogposts/1.json
   def show
+    @tags = @blogpost.tags ||= []
   end
 
   # GET /blogposts/new
   def new
     @blogpost = Blogpost.new
+    @tags = Tag.all
   end
 
   # GET /blogposts/1/edit
   def edit
+    @tags = Tag.all
   end
 
   # POST /blogposts
@@ -40,6 +45,7 @@ class BlogpostsController < ApplicationController
   # PATCH/PUT /blogposts/1
   # PATCH/PUT /blogposts/1.json
   def update
+    params[:blogpost][:tag_ids] ||= []
     respond_to do |format|
       if @blogpost.update(blogpost_params)
         format.html { redirect_to @blogpost, notice: 'Blogpost was successfully updated.' }
@@ -69,6 +75,6 @@ class BlogpostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blogpost_params
-      params.require(:blogpost).permit(:title, :text, :featured, :blogimage)
+      params.require(:blogpost).permit(:title, :text, :featured, :blogimage, tag_ids:[] )
     end
 end

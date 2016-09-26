@@ -11,20 +11,30 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :text %>
     <%= f.text_area :text %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :image %>
     <%= f.file_field :image %>
   </div>
+
+  <div class="form-group">
+    <%= f.label :tags %><br />
+    <% @tags.each do |tag|  %>
+      <%= check_box_tag "portfolio_item[tag_ids][]", tag.id, portfolio_item.tags.include?(tag) %>
+      <%= tag.tag_name %><br />
+    <% end %>
+
+  </div>
+
 
   <div class="actions">
     <%= f.submit %>

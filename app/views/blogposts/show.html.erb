@@ -1,19 +1,35 @@
-<p id="notice"><%= notice %></p>
+<div class="col-md-4">
+  <div class="blogitem_image">
+    <%= image_tag @blogpost.blogimage_url.to_s %>
+  </div>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @blogpost.title %>
-</p>
+<div class="col-md-8">
 
-<p>
-  <strong>Text:</strong>
-  <%= @blogpost.text %>
-</p>
+<div class="blogitem_title">
+  <h1><%= @blogpost.title %></h1>
+</div>
 
-<p>
-  <strong>Featured:</strong>
-  <%= @blogpost.featured %>
-</p>
+<div class="blogitem_specs">
+  <%= @blogpost.created_at.strftime("%e %B %Y") %>
+</div>
 
-<%= link_to 'Edit', edit_blogpost_path(@blogpost) %> |
-<%= link_to 'Back', blogposts_path %>
+<div class="blogtags">
+  <% @tags.each do |tag| %>
+      <div class="blogitemlist_tag">
+        <%= tag.tag_name %><br />
+      </div>
+  <% end %>
+</div>
+
+<div class="blogitem_text">
+  <p>
+    <%= markdown(@blogpost.text) %>
+  </p>
+</div>
+
+<% if user_signed_in? %>
+  <%= link_to 'Edit', edit_blogpost_path(@blogpost) %> |
+  <%= link_to 'Delete', blogpost_path, method: 'delete' %>
+<% end %>
+</div>

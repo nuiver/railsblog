@@ -22,8 +22,8 @@ $(document).on('turbolinks:load', function() {
 
 function fadingMenu() {
 
-  var fadeStart=100 // 100px scroll or less will equiv to 1 opacity
-  ,fadeUntil=300 // 200px scroll or more will equiv to 0 opacity
+  var fadeStart=10 // 100px scroll or less will equiv to 1 opacity
+  ,fadeUntil=450 // 200px scroll or more will equiv to 0 opacity
   ,menu = $('.nav')
   ;
 
@@ -36,7 +36,7 @@ function fadingMenu() {
   }else if( offset<=fadeUntil ){
       opacity=0+offset/fadeUntil;
   }
-  menu.css('background-color', 'rgba(22, 22, 22,' + opacity + ')');
+  menu.css('background-color', 'rgba(26, 85, 119,' + opacity + ')');
   });
 
 };
