@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     get "/signin" => 'devise/sessions#create'
   end
 
-  devise_for :users
+  devise_for :users, controllers: { registrations: "registrations"}
   resources :portfolio_items
   resources :blogposts
 
