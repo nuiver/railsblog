@@ -1,16 +1,27 @@
 <div class="col-md-4">
-  <div class="portitemlist_image">
-    <%= image_tag portfolio_item.image_url.to_s %>
-  </div>
-  <div class="portitemlist_title">
-    <h3><%= link_to portfolio_item.title, portfolio_item %></h3>
-  </div>
-  <div class="portitemlist_text">
-    <p><%= truncate(portfolio_item.text, length: 300) %><p>
-  </div>
-  <div>
-  <% if user_signed_in? %>
-    <%= link_to 'Edit', edit_portfolio_item_path(portfolio_item) %>
-  <% end %>
+  <div class="portitemlist_box">
+    <div class="portitemlist_imagebox">
+      <div class="portitemlist_image"  >
+        <%= image_tag portfolio_item.image_url.to_s %>
+      </div>
+    </div>
+    <div class="portitemlist_title">
+      <h3><%= link_to portfolio_item.title, portfolio_item %></h3>
+    </div>
+    <div class="portitemlist_text">
+      <p><%= truncate(portfolio_item.text, length: 300) %><p>
+    </div>
+    <div class="portitemlist_taglist">
+      <% portfolio_item.tags.each do |tag| %>
+        <div class="portitemlist_tag">
+          <%= tag.tag_name %><br />
+        </div>
+      <% end %>
+    </div>
+    <div>
+    <% if user_signed_in? %>
+      <%= link_to 'Edit', edit_portfolio_item_path(portfolio_item) %>
+    <% end %>
+    </div>
   </div>
 </div>

@@ -1,4 +1,3 @@
-
 <div class="col-md-6">
   <div class="portfolioitem_image">
     <%= image_tag @portfolio_item.image_url.to_s %>
@@ -6,17 +5,29 @@
 </div>
 
 <div class="col-md-6">
-<h1><%= @portfolio_item.title %></h1>
 
-<p>
-  <%= markdown(@portfolio_item.text) %>
-</p>
+<div class="portitem_title">
+  <h1><%= @portfolio_item.title %></h1>
+</div>
 
-<% @tags.each do |tag| %>
-  <div>
-    <%= tag.tag_name %><br />
-  </div>
-<% end %>
+<div class="portitem_specs">
+  <%= @portfolio_item.created_at.strftime("%e %B %Y") %>
+</div>
+
+<div class="porttags">
+  <% @tags.each do |tag| %>
+      <div class="portitemlist_tag">
+        <%= tag.tag_name %><br />
+      </div>
+  <% end %>
+</div>
+
+<div class="portitem_text">
+  <p>
+    <%= markdown(@portfolio_item.text) %>
+  </p>
+</div>
+
 <% if user_signed_in? %>
   <%= link_to 'Edit', edit_portfolio_item_path(@portfolio_item) %> |
   <%= link_to 'Delete', portfolio_item_path, method: 'delete' %>
