@@ -36,7 +36,7 @@ function fadingMenu() {
   }else if( offset<=fadeUntil ){
       opacity=0+offset/fadeUntil;
   }
-  menu.css('background-color', 'rgba(22, 22, 22,' + opacity + ')');
+  menu.css('background-color', 'rgba(26, 85, 119,' + opacity + ')');
   });
 
 };
