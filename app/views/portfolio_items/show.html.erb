@@ -2,6 +2,12 @@
   <div class="portfolioitem_image">
     <%= image_tag @portfolio_item.image_url.to_s %>
   </div>
+  <% if @portfolio_item.live_url %>
+  <h5><%= link_to "Link to the website", @portfolio_item.live_url %></h5>
+  <% end %>
+  <% if @portfolio_item.gh_url %>
+  <h5><%= link_to "Link to the GitHub repo", @portfolio_item.gh_url %></h5>
+  <% end %>
 </div>
 
 <div class="col-md-6">
