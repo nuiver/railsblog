@@ -1,5 +1,6 @@
 class PortfolioItemsController < ApplicationController
   before_action :set_portfolio_item, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
 
   # GET /portfolio_items
   # GET /portfolio_items.json
