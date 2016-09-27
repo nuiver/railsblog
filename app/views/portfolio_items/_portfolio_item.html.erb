@@ -2,7 +2,7 @@
   <div class="portitemlist_box">
     <div class="portitemlist_imagebox">
       <div class="portitemlist_image"  >
-        <%= image_tag portfolio_item.image_url.to_s %>
+        <%= link_to image_tag(portfolio_item.image_url.to_s), portfolio_item %>
       </div>
     </div>
     <div class="portitemlist_title">

@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
 
+  resources :tags
   root to: "static#homepage"
 
   devise_scope :user do
     get "/signin" => 'devise/sessions#create'
   end
 
-  devise_for :users
+  devise_for :users, controllers: { registrations: "registrations"}
   resources :portfolio_items
   resources :blogposts
 

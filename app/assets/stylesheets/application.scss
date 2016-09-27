@@ -89,6 +89,9 @@ form input, form textarea {
   left: 75px;
   letter-spacing: 0.03em;
 }
+.minimenu {
+  display: none;
+}
 .menu {
   font-size: 14px;
 }
@@ -110,12 +113,27 @@ form input, form textarea {
   display: inline-block;
   margin: 18px 10px;
 }
+
+@media only screen and (max-width: 991px) {
+.menu {
+  display: none;
+}
+.minimenu {
+  display: block;
+}
+.hamburger {
+  float: right;
+  margin: 15px 0px;
+  font-size: 25px;
+  color: #C0A062;
+}
+}
 .flash_messages {
   background-color: #C0A062;
 }
 // Jumbo
 .buffer {
-  margin-top: 60px;
+  margin-top: 80px;
 }
 .jumbo {
   height: 50vh;
