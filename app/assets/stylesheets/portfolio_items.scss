@@ -30,12 +30,27 @@
 }
 .portitemlist_title h3 {
   margin: 18px 0 12px 0;
+  font-size: 24px;
+}
+@media only screen and (min-width: 992px) {
+  .portitemlist_title.longline h3 {
+    font-size: 19px;
+    line-height: 22px;
+  }
+  .portitemlist_title.verylongline h3 {
+    font-size: 15px;
+    line-height: 18px;
+  }
 }
 .portitemlist_text {
   font-size: 12px;
   color: #1A5577;
   padding: 5px 15px;
-  min-height: 135px;
+}
+@media only screen and (min-width: 992px) {
+  .portitemlist_text {
+    min-height: 135px;
+  }
 }
 .portfolioitem_image {
   margin-bottom: 15px;
