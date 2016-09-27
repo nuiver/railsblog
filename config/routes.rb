@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :tags
   root to: "static#homepage"
 
   devise_scope :user do

@@ -21,7 +21,7 @@
 </div>
 
 <div class="porttags">
-  <% @tags.each do |tag| %>
+  <% @tags.sort.each do |tag| %>
       <div class="portitemlist_tag">
         <%= tag.tag_name %><br />
       </div>
