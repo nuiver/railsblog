@@ -45,8 +45,10 @@ h1, h2, h3, h4, h5, h6 {
 
 // forms
 form input, form textarea {
-  color: #dddddd;
-  background-color: #444444;
+
+}
+textarea.form-control.extra-big {
+  height: 300px;
 }
 
 // alerts
@@ -127,7 +129,33 @@ form input, form textarea {
   font-size: 25px;
   color: #C0A062;
 }
+.minimenu.activemenu {
+  background-color: #fff;
 }
+}
+// dropdown menu
+.dropdownmenu {
+  float:right;
+  background-color: #fff;
+  width: 25vw;
+  text-align: center;
+}
+@media only screen and (min-width: 992px) {
+  .dropdownmenu {
+    display: none;
+  }
+}
+.dropitem {
+  height: 30px;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  font-weight: 400;
+  padding-top: 5px;
+}
+.dropitem a:hover {
+  color: #1A5577;
+}
+// flash messages and notices
 .flash_messages {
   background-color: #C0A062;
 }

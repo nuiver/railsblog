@@ -5,14 +5,20 @@
         <%= link_to image_tag(portfolio_item.image_url.to_s), portfolio_item %>
       </div>
     </div>
-    <div class="portitemlist_title">
+    <% if portfolio_item.title.length > 50 && portfolio_item.title.length < 75 %>
+      <div class="portitemlist_title longline">
+    <% elsif portfolio_item.title.length > 75 %>
+      <div class="portitemlist_title verylongline">
+    <% else %>
+      <div class="portitemlist_title">
+    <% end %>
       <h3><%= link_to portfolio_item.title, portfolio_item %></h3>
     </div>
     <div class="portitemlist_text">
       <p><%= truncate(portfolio_item.text, length: 300) %><p>
     </div>
     <div class="portitemlist_taglist">
-      <% portfolio_item.tags.each do |tag| %>
+      <% portfolio_item.tags.sort{|left, right| left.tag_name.downcase <=> right.tag_name.downcase}.each do |tag| %>
         <div class="portitemlist_tag">
           <%= tag.tag_name %><br />
         </div>

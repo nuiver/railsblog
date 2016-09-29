@@ -5,14 +5,20 @@
         <%= link_to image_tag(blogpost.blogimage_url.to_s), blogpost %>
       </div>
     </div>
-    <div class="blogitemlist_title">
+    <% if blogpost.title.length > 50 && blogpost.title.length < 75 %>
+      <div class="blogitemlist_title longline">
+    <% elsif blogpost.title.length > 75 %>
+      <div class="blogitemlist_title verylongline">
+    <% else %>
+      <div class="blogitemlist_title">
+    <% end %>
       <h3><%= link_to blogpost.title, blogpost %></h3>
     </div>
     <div class="blogitemlist_text">
       <p><%= truncate(blogpost.text, length: 300) %><p>
     </div>
     <div class="blogitemlist_taglist">
-      <% blogpost.tags.each do |tag| %>
+      <% blogpost.tags.sort{|left, right| left.tag_name.downcase <=> right.tag_name.downcase}.each do |tag| %>
         <div class="blogitemlist_tag">
           <%= tag.tag_name %><br />
         </div>
