@@ -18,6 +18,7 @@
 
 $(document).on('turbolinks:load', function() {
   fadingMenu();
+  toggleMiniMenu();
 });
 
 function fadingMenu() {
@@ -38,5 +39,23 @@ function fadingMenu() {
   }
   menu.css('background-color', 'rgba(26, 85, 119,' + opacity + ')');
   });
+
+};
+
+function toggleMiniMenu() {
+
+  $('#minimenu_icon').click(function(e) {
+    e.preventDefault();
+    $('#menumenu_div').toggleClass('activemenu')
+    $('#dropdown').toggleClass('hidden');
+  });
+
+  $('.dropdownmenu').mouseleave(function(e) {
+      e.preventDefault();
+      $('#dropdown').addClass('hidden');
+      $('#menumenu_div').toggleClass('activemenu')
+    });
+
+
 
 };

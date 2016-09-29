@@ -1,6 +1,6 @@
 <div class="nav">
   <div class="container">
-    <div class="logobar col-md-3 col-xs-10">
+    <div class="logobar col-md-3 col-sm-11 col-xs-10">
       <div class="logo">
         <%= image_tag 'nui-logo-open.png' %>
       </div>
@@ -19,14 +19,36 @@
         <li><a href="https://twitter.com/marknuiver" target="_blank" class="fa fa-twitter"></a></li>
         <li><a href="https://github.com/nuiver" target="_blank" class="fa fa-github"></a></li>
     </div>
-    <div class="minimenu col-xs-2">
-      <div class="hamburger fa fa-bars"></div>
+    <div id="menumenu_div" class="minimenu col-sm-1 col-xs-2">
+      <div id="minimenu_icon" class="hamburger fa fa-bars"></div>
     </div>
   </div>
   <div class="flash_messages">
     <div class="container">
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
+    </div>
+  </div>
+  <div id="dropdown" class="container hidden">
+    <div class="dropdownmenu">
+      <div class="dropitem">
+        <%= link_to "ABOUT ME", root_path %>
+      </div>
+      <div class="dropitem">
+        <%= link_to "BLOG", blogposts_path %>
+      </div>
+      <div class="dropitem">
+        <%= link_to "PORTFOLIO", portfolio_items_path %>
+      </div>
+      <div class="dropitem">
+        <%= link_to "CONTACT", contact_path %>
+      </div>
+      <div class="dropitem">
+        <a href="https://www.linkedin.com/in/marknuiver" target="_blank" class="fa fa-linkedin-square"></a>
+        <a href="https://www.facebook.com/nuiver" target="_blank" class="fa fa-facebook-official"></a>
+        <a href="https://twitter.com/marknuiver" target="_blank" class="fa fa-twitter"></a>
+        <a href="https://github.com/nuiver" target="_blank" class="fa fa-github"></a>
+      </div>
     </div>
   </div>
 </div>
