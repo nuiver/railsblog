@@ -16,14 +16,18 @@
 .stack-circle {
   height: 12vw;
   width: 12vw;
-  background-color: #c0a062;
+  background-color: #dddddd;
   border-radius: 50%;
   text-align: center;
-  padding-top: 5vw;
+  padding: 2.5vw;
+}
+.stack-circle img {
+  height: 100%;
 }
 @media only screen and (max-width: 768px) {
   .stack-circle {
     height: 40vw;
     width: 40vw;
+    padding: 10vw;
   }
 }
