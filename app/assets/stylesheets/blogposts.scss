@@ -1,9 +1,72 @@
 // Place all the styles related to the Blogposts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Blog featured
+.blogitem_feature {
+  height: 400px;
+  overflow: hidden;
+  background: #fff;
+}
+
+@media only screen and (max-width: 991px) {
+  .blogitem_feature {
+    height: auto;
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 46%, rgba(192,212,226,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 46%,rgba(192,212,226,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 46%,rgba(192,212,226,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c0d4e2',GradientType=0 ); /* IE6-9 */
+  }
+}
+.blogitem_feature img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.8;
+}
+.blf_img_sm img {
+position: relative;
+}
+
+.blf_main {
+  height: 100%;
+  background-color: #fff;
+  color: #fff;
+  padding: 0 40px !important;
+}
+@media only screen and (max-width: 991px) {
+  .blf_main {
+    background: none;
+    padding: 0 20px !important;
+  }
+}
+.blf_main p {
+  color: #222222;
+}
+
+.blf_main h3 {
+  font-size: 30px;
+  margin-top: 40px;
+  line-height: 38px;
+}
+.blf_main h3 a, .blf_main h3 a:visited {
+  color: #1A5577;
+}
+.blf_main p a, .blf_main p a:visited {
+  color: #333333;
+}
+.blf_date p {
+  font-size: 0.8em;
+  color: #bbbbbb;
+}
+
+// Blog Itemlisf
+
 .blogitemlist_box {
   min-height: 500px;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+46,c0d4e2+100 */
   background: rgb(255,255,255); /* Old browsers */
   background: -moz-linear-gradient(top, rgba(255,255,255,1) 46%, rgba(192,212,226,1) 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top, rgba(255,255,255,1) 46%,rgba(192,212,226,1) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -20,6 +83,13 @@
 }
 .blogitemlist_image {
   display: inline-block;
+  height: 200px;
+  overflow: hidden;
+}
+@media only screen and (max-width: 991px) {
+  .blogitemlist_image {
+    height: auto;
+  }
 }
 .blogitemlist_image img {
   width: 100%;
