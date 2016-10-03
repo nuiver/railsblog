@@ -6,7 +6,7 @@ class BlogpostsController < ApplicationController
   # GET /blogposts
   # GET /blogposts.json
   def index
-    @blogposts = Blogpost.all
+    @blogposts = Blogpost.all.order('created_at desc')
   end
 
   # GET /blogposts/1
