@@ -1,7 +1,26 @@
-<!-- <div class="jumbo"></div> -->
+<% featured_post = @blogposts.first %>
 
-<div class="col-md-12">
-  <h1>Blog</h1>
+<div class="blogitem_feature col-md-12 ">
+  <img src="<%= featured_post.blogimage_url.to_s %>" class="hidden-xs hidden-sm">
+  <div class="col-md-1 hidden-xs hidden-sm"></div>
+
+  <div class="blf_main col-md-7 col-xs-12">
+    <div class="blf_img_sm hidden-md hidden-lg">
+      <%= link_to image_tag(featured_post.blogimage_url.to_s), featured_post %>
+    </div>
+    <h3><%= link_to featured_post.title, featured_post %></h3>
+    <p><%= link_to truncate(featured_post.text, length: 300), featured_post %><p>
+    <br />
+    <div class="blf_date">
+      <p><%= featured_post.created_at.strftime("%e %B %Y") %></p>
+    </div>
+    <% featured_post.tags.sort{|left, right| left.tag_name.downcase <=> right.tag_name.downcase}.each do |tag| %>
+      <div class="blogitemlist_tag">
+        <%= tag.tag_name %><br />
+      </div>
+    <% end %>
+  </div>
+  <div class="col-md-4 hidden-xs hidden-sm"></"></div>
 </div>
 
-<%= render @blogposts %>
+<%= render @blogposts.offset(1).all %>

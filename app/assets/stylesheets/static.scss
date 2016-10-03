@@ -1,14 +1,22 @@
 // Place all the styles related to the Static controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// GENERAL STYLES
 .home-about .home-stack{
   padding: 20px 15px;
 }
 
+// ABOUT COLUMN
 .about-pic img {
   width: 100%;
   padding-top: 20px;
 }
+.about-text h1 {
+  margin: 20px 0 40px 0;
+}
+
+// STACK COLUMN
 .stack-column {
   padding: 20px 15px;
 }
