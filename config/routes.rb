@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :tags
-  root to: "static#homepage"
+  root to: "blogposts#index"
 
   devise_scope :user do
     get "/signin" => 'devise/sessions#create'
