@@ -2,7 +2,7 @@
   <div class="blogitemlist_box">
     <div class="blogitemlist_imagebox">
       <div class="blogitemlist_image"  >
-        <%= link_to image_tag(blogpost.blogimage_url.to_s), blogpost %>
+        <%= link_to image_tag(blogpost.blogimage_url.to_s, alt: blogpost.alternative_text), blogpost %>
       </div>
     </div>
     <% if blogpost.title.length > 50 && blogpost.title.length < 75 %>

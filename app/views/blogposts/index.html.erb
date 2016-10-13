@@ -1,7 +1,7 @@
 <% featured_post = @blogposts.first %>
 
 <div class="blogitem_feature col-md-12 ">
-  <img src="<%= featured_post.blogimage_url.to_s %>" class="hidden-xs hidden-sm">
+  <img src="<%= featured_post.blogimage_url.to_s %>" alt="<%= featured_post.alternative_text %>" class="hidden-xs hidden-sm">
   <div class="col-md-1 hidden-xs hidden-sm"></div>
 
   <div class="blf_main col-md-7 col-xs-12">

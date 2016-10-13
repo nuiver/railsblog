@@ -2,7 +2,7 @@
   <div class="portitemlist_box">
     <div class="portitemlist_imagebox">
       <div class="portitemlist_image"  >
-        <%= link_to image_tag(portfolio_item.image_url.to_s), portfolio_item %>
+        <%= link_to image_tag(portfolio_item.image_url.to_s, alt: portfolio_item.alternative_text ), portfolio_item %>
       </div>
     </div>
     <% if portfolio_item.title.length > 50 && portfolio_item.title.length < 75 %>
