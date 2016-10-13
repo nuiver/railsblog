@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mark Nuiver</title>
+    <title>Mark Nuiver <%= " - " + @blogpost.title if @blogpost %><%= " - " + @portfolio_item.title if @portfolio_item %> </title>
     <%= csrf_meta_tags %>
     <% if content_for?(:head) %>
       <%= yield(:head) %>

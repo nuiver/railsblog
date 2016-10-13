@@ -75,6 +75,6 @@ class BlogpostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blogpost_params
-      params.require(:blogpost).permit(:title, :text, :featured, :blogimage, tag_ids:[] )
+      params.require(:blogpost).permit(:title, :text, :featured, :blogimage, :description, tag_ids:[] )
     end
 end
