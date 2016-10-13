@@ -1,3 +1,10 @@
+<% content_for :head do %>
+<meta name='description'
+      content='<%= @portfolio_item.title %>' />
+<meta name='keywords'
+      content='<%= @tags.map{ |i| i.tag_name }.join(',') %>' />
+<% end %>
+
 <div class="col-md-6">
   <div class="portfolioitem_image">
     <%= image_tag @portfolio_item.image_url.to_s %>
