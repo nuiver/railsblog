@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
+//= require_tree ./menuhelper
 
 $(document).on('turbolinks:load', function() {
   fadingMenu();
@@ -44,6 +45,8 @@ function fadingMenu() {
 
 function toggleMiniMenu() {
 
+  $('#minimenu_icon').css('cursor', 'pointer');
+
   $('#minimenu_icon').click(function(e) {
     e.preventDefault();
     $('#menumenu_div').toggleClass('activemenu')
@@ -51,11 +54,9 @@ function toggleMiniMenu() {
   });
 
   $('.dropdownmenu').mouseleave(function(e) {
-      e.preventDefault();
-      $('#dropdown').addClass('hidden');
-      $('#menumenu_div').toggleClass('activemenu')
-    });
-
-
+    e.preventDefault();
+    $('#dropdown').addClass('hidden');
+    $('#menumenu_div').toggleClass('activemenu')
+  });
 
 };
