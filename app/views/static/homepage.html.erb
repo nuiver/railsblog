@@ -1,6 +1,13 @@
+<% content_for :head do %>
+<meta name='description'
+      content='Summary of Mark Nuiver, full stack developer / designer ' />
+<meta name='keywords'
+      content='Mark Nuiver,web development,design' />
+<% end %>
+
 <div class="home-about">
   <div class="about-pic col-md-3 col-sm-6">
-    <%= image_tag "codaisseur-portret-mark-400px.jpg", class: "hidden-xs" %>
+    <%= image_tag "codaisseur-portret-mark-400px.jpg", alt: "Portrait of Mark Nuiver", class: "hidden-xs" %>
   </div>
   <div class="about-text col-md-9 col-sm-6">
     <h1>About me</h1>
@@ -17,32 +24,32 @@
   </div>
   <div class="stack-column col-md-2 col-xs-6">
     <div class="stack-circle">
-      <%= image_tag "ruby.svg" %>
+      <%= image_tag "ruby.svg", alt: "Ruby logo" %>
     </div>
   </div>
   <div class="stack-column col-md-2 col-xs-6">
     <div class="stack-circle">
-      <%= image_tag "rails.svg" %>
+      <%= image_tag "rails.svg", alt: "Rails logo" %>
     </div>
   </div>
   <div class="stack-column col-md-2 col-xs-6">
     <div class="stack-circle">
-      <%= image_tag "react.svg" %>
+      <%= image_tag "react.svg", alt: "React logo" %>
     </div>
   </div>
   <div class="stack-column col-md-2 col-xs-6">
     <div class="stack-circle">
-      <%= image_tag "redux.svg" %>
+      <%= image_tag "redux.svg", alt: "Redux logo" %>
     </div>
   </div>
   <div class="stack-column col-md-2 col-xs-6">
     <div class="stack-circle">
-      <%= image_tag "javascript.svg" %>
+      <%= image_tag "javascript.svg", alt: "JS logo" %>
     </div>
   </div>
   <div class="stack-column col-md-2 col-xs-6">
     <div class="stack-circle">
-      <%= image_tag "html.svg" %>
+      <%= image_tag "html.svg", alt: "html logo" %>
     </div>
   </div>
 </div>
